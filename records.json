@@ -1,0 +1,200 @@
+{
+ "name": "Lawless - Tamrielic Distribution - OWL Patch",
+ "description": "Private patch for the Overhaul 1.2 load order.",
+ "masters": [
+  "Skyrim.esm",
+  "Dragonborn.esm",
+  "Open World Loot.esp",
+  "Bandit War.esp",
+  "Bandit War Expanded - Tamrielic Distribution.esp",
+  "Bandit War Expanded OWL.esp"
+ ],
+ "inputs": [
+  "Bandit War Expanded - Tamrielic Distribution.esp",
+  "Bandit War Expanded OWL.esp"
+ ],
+ "records": [
+  {
+   "sub": "Npcs",
+   "form": "037FE3:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "037FE5:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "037FF4:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "037FF5:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "037FFA:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "037FFF:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "038001:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "038002:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "038009:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "03800A:Dragonborn.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "05B615:Skyrim.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "0E5F38:Skyrim.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "100566:Skyrim.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  },
+  {
+   "sub": "Npcs",
+   "form": "100567:Skyrim.esm",
+   "base": "Bandit War Expanded OWL.esp",
+   "steps": [
+    {
+     "donor": "Bandit War Expanded - Tamrielic Distribution.esp",
+     "take": [
+      "DefaultOutfit"
+     ]
+    }
+   ]
+  }
+ ]
+}
