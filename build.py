@@ -105,6 +105,9 @@ def merged(r):
     f = record_file(r['base'], r)
     cur = blocks(f.read_text())
     for step in r['steps']:
+        if 'set' in step:  # a value computed from every plugin in the chain, not one donor's field
+            cur = {**cur, **step['set']}
+            continue
         src = blocks(record_file(step['donor'], r).read_text())
         if 'add_scripts' in step:
             cur = merge_scripts(cur, src, step)
