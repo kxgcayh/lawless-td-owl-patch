@@ -9,8 +9,8 @@ import hashlib, json, os, pathlib, re, shutil, struct, subprocess, sys, tempfile
 HERE = pathlib.Path(__file__).resolve().parent
 INPUTS = pathlib.Path(os.environ.get('INPUTS', HERE / 'inputs'))
 Y = HERE / 'build'
-PATCH = json.loads((HERE / 'records.json').read_text())
-NAME = PATCH['name']
+DATA = json.loads((HERE / 'records.json').read_text())
+PLUGINS = DATA.get('plugins', [DATA])  # one plugin, or the plugins of a FOMOD
 
 
 def find_dll():  # SPRIGGIT_DLL, else Spriggit's own download folder, else the NuGet cache
@@ -127,13 +127,21 @@ def main():
     check_inputs()
     dll = find_dll()
     shutil.rmtree(Y, ignore_errors=True)
-    for p in PATCH['inputs']:
+    for p in sorted({i for x in PLUGINS for i in x['inputs']}):
         spriggit(dll, 'serialize', INPUTS / p, Y / f'yaml-{p[:-4]}', '-g', 'SkyrimSE', '-p', 'Spriggit.Yaml.Skyrim', '-v', '0.41.0')
+    for x in PLUGINS:
+        build_plugin(dll, x, write)
+    if write and (HERE / 'fomod').is_dir():
+        package()
+
+
+def build_plugin(dll, PATCH, write):
+    NAME = PATCH['name']
     recs = dict(merged(r) for r in PATCH['records'])
     print(f'{NAME}: {len(recs)} records, {len(PATCH["masters"])} masters')
     if not write:
         return
-    out, rt, esp = Y / 'out', Y / 'rt', HERE / 'dist' / f'{NAME}.esp'
+    out, rt, esp = Y / 'out' / NAME, Y / 'rt' / NAME, HERE / 'dist' / f'{NAME}.esp'
     for rel, t in recs.items():
         (out / rel).parent.mkdir(parents=True, exist_ok=True)
         (out / rel).write_text(t)
@@ -148,11 +156,29 @@ def main():
     spriggit(dll, 'serialize', esp, rt, '-g', 'SkyrimSE', '-p', 'Spriggit.Yaml.Skyrim', '-v', '0.41.0')
     for rel, t in recs.items():  # lower(): the header's master casing replaces the casing in the FormKeys
         assert sorted(t.lower().splitlines()) == sorted((rt / rel).read_text().lower().splitlines()), f'round trip differs: {rel}'
-    check_plugin(esp.read_bytes(), len(recs))
+    check_plugin(esp.read_bytes(), len(recs), PATCH['masters'])
     print('wrote', esp)
 
 
-def check_plugin(b, want):  # independent of Spriggit: ESL flag, masters, record count, no new forms
+def package():  # FOMOD zip: fomod/ plus one folder per plugin, named as in ModuleConfig.xml
+    from xml.dom import minidom
+    import zipfile
+    src = HERE / 'fomod'
+    for x in ('info.xml', 'ModuleConfig.xml'):
+        minidom.parse(str(src / x))
+    sources = set(re.findall(r'source="([^"]+)"', (src / 'ModuleConfig.xml').read_text()))
+    built = {x['name'] for x in PLUGINS}
+    assert sources == built, f'ModuleConfig sources {sorted(sources)} != plugins {sorted(built)}'
+    out = HERE / 'dist' / f"{DATA['title']}.zip"
+    with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
+        for x in ('info.xml', 'ModuleConfig.xml'):
+            z.write(src / x, f'fomod/{x}')
+        for n in sorted(built):
+            z.write(HERE / 'dist' / f'{n}.esp', f'{n}/{n}.esp')
+    print('wrote', out)
+
+
+def check_plugin(b, want, masters):  # independent of Spriggit: ESL flag, masters, record count, no new forms
     assert struct.unpack_from('<I', b, 8)[0] & 0x200, 'ESL flag missing'
     size = struct.unpack_from('<I', b, 4)[0]
     h, i, ms = b[24:24 + size], 0, []
@@ -161,7 +187,7 @@ def check_plugin(b, want):  # independent of Spriggit: ESL flag, masters, record
         if t == b'MAST':
             ms.append(h[i + 6:i + 6 + n].rstrip(b'\0').decode('latin1'))
         i += 6 + n
-    assert ms == PATCH['masters'], 'masters changed'
+    assert ms == masters, 'masters changed'
     off, n = 24 + size, 0
     while off < len(b):
         t, sz, _, fid = struct.unpack_from('<4sIII', b, off)
