@@ -38,7 +38,7 @@ See [BUILDING.md](BUILDING.md).
 ## Verification Status
 
 - Checked: Spriggit round trip, and a separate parser for the ESL flag, masters, record count and no new forms.
-- Not tested in game.
+- In game, 2026-11-07: loaded and booted with the full load order, 0 crash dumps. All records win on disk. One outfit read live before the split. Crews not inspected in game.
 
 ## Credits and Permissions
 
