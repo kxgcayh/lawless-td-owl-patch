@@ -173,8 +173,11 @@ def package():  # FOMOD zip: fomod/ plus one folder per plugin, named as in Modu
     with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED) as z:
         for x in ('info.xml', 'ModuleConfig.xml'):
             z.write(src / x, f'fomod/{x}')
-        for n in sorted(built):
+        for x in PLUGINS:
+            n = x['name']
             z.write(HERE / 'dist' / f'{n}.esp', f'{n}/{n}.esp')
+            for e in x.get('extra', []):
+                z.write(HERE / e, f'{n}/{e}')
     print('wrote', out)
 
 
