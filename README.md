@@ -25,7 +25,6 @@ Built and checked against: Open World Loot - Encounter Zone and Loot Overhaul 2.
 
 Keeps the OWL record, including its weapon lists, and takes `DefaultOutfit` from the Tamrielic Distribution patch.
 
-Details and the full record list: [NOTES.md](NOTES.md).
 
 ## Install
 

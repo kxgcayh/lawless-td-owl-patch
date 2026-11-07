@@ -1,6 +1,6 @@
 # Building from source
 
-Back to [README.md](README.md). The technical notes are in [NOTES.md](NOTES.md).
+Back to [README.md](README.md).
 
 This repository holds no plugin data from other mods: only `build.py`, the decisions in `records.json`, and the hashes in `inputs.sha256`. You supply the plugins in `inputs/`.
 
