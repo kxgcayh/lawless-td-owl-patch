@@ -1,0 +1,6 @@
+Lawless - Tamrielic Distribution - OWL Patch - Third-party notices
+
+Lawless - Tamrielic Distribution - OWL Patch is licensed MIT (see LICENSE), which covers its scripts and documents only.
+The plugin and any other files in this package are derived from the mods below and stay under their authors' permissions.
+
+Holds no plugin data from other mods; inputs/ is not tracked. Credit goes to the authors of the mods listed under Requirements. Their permissions have not been checked, and must be before any release.
