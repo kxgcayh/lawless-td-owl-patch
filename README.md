@@ -41,19 +41,17 @@ See [BUILDING.md](BUILDING.md).
 
 ## Credits and Permissions
 
-Holds no plugin data from other mods; `inputs/` is not tracked. Credit goes to the authors of the mods listed below.
+Holds no plugin data from other mods; `inputs/` is not tracked.
 
-Checked on 2026-11-11 and 2026-11-13 against each mod's Nexus permission block and author notes, not its description or readme. The plugin is derived from the mods below and stays under their authors' terms.
+Credit goes to the authors of the mods below. Permission status is based on each mod's Nexus page permissions, read on 2026-11-11 and 2026-11-13.
 
-| Mod | Author | What the Nexus page says | Status |
-|---|---|---|---|
-| [Lawless - A Bandit Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/88080) | Ooreeoo | Free use with credit, and derived work must stay free use. | allowed |
-| [Open World Loot - Encounter Zone and Loot Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/49681) | deletepch, Luridum and zinghunt | Upload, modification, conversion and asset use are allowed. | allowed |
-| [Tamrielic Distribution](https://www.nexusmods.com/skyrimspecialedition/mods/71372) | TateTaylorOH (Tate Taylor) | Upload, modification and asset use are allowed with credit. Not in sold files. | allowed |
+- [Lawless - A Bandit Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/88080) by Ooreeoo: allowed based on the Nexus page permissions
+- [Open World Loot - Encounter Zone and Loot Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/49681) by deletepch, Luridum and zinghunt: allowed based on the Nexus page permissions
+- [Tamrielic Distribution](https://www.nexusmods.com/skyrimspecialedition/mods/71372) by TateTaylorOH (Tate Taylor): allowed based on the Nexus page permissions
 
-`Bandit War Expanded - Tamrielic Distribution.esp` comes from Lawless - Tamrielic Distribution Patch Update, kxgcayh's own patch built from Lawless and Tamrielic Distribution, so the two rows for those mods cover it.
+`Bandit War Expanded - Tamrielic Distribution.esp` comes from Lawless - Tamrielic Distribution Patch Update, kxgcayh's own patch built from Lawless and Tamrielic Distribution, so the entries for those two mods cover it.
 
-Every source allows a patch like this with credit; credit the authors above when publishing. Lawless asks that derived work stay free use, so this patch must too.
+Credit the authors above and keep this patch free use.
 
 ## License
 
