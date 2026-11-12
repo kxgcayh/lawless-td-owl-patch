@@ -49,6 +49,9 @@ Checked on 2026-11-11 and 2026-11-13 against each mod's Nexus permission block a
 |---|---|---|---|
 | [Lawless - A Bandit Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/88080) | Ooreeoo | Free use with credit, and derived work must stay free use. | allowed |
 | [Open World Loot - Encounter Zone and Loot Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/49681) | deletepch, Luridum and zinghunt | Upload, modification, conversion and asset use are allowed. | allowed |
+| [Tamrielic Distribution](https://www.nexusmods.com/skyrimspecialedition/mods/71372) | TateTaylorOH (Tate Taylor) | Upload, modification and asset use are allowed with credit. Not in sold files. | allowed |
+
+`Bandit War Expanded - Tamrielic Distribution.esp` comes from Lawless - Tamrielic Distribution Patch Update, kxgcayh's own patch built from Lawless and Tamrielic Distribution, so the two rows for those mods cover it.
 
 Every source allows a patch like this with credit; credit the authors above when publishing. Lawless asks that derived work stay free use, so this patch must too.
 
