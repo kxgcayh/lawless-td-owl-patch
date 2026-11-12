@@ -1,6 +1,6 @@
 name = "lawless-td-owl-patch"
 display_name = "Lawless - Tamrielic Distribution - OWL Patch"
-version = "0.1.0"
+version = "0.1.1"
 description = "Restores Tamrielic Distribution outfits on 14 Lawless NPCs when using the Open World Loot patch. ESL-flagged, no assets."
 
 # archive path = source path (relative to this folder); dist/ is written by: python3 build.py --write

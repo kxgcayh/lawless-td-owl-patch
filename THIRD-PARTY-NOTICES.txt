@@ -3,4 +3,11 @@ Lawless - Tamrielic Distribution - OWL Patch - Third-party notices
 Lawless - Tamrielic Distribution - OWL Patch is licensed MIT (see LICENSE), which covers its scripts and documents only.
 The plugin and any other files in this package are derived from the mods below and stay under their authors' permissions.
 
-Holds no plugin data from other mods; inputs/ is not tracked. Credit goes to the authors of the mods listed under Requirements. Their permissions have not been checked, and must be before any release.
+Holds no plugin data from other mods; inputs/ is not tracked. Credit goes to the authors of the mods below.
+Permission status is based on each mod's Nexus page permissions, read on 2026-11-11 and 2026-11-13.
+
+- Lawless - A Bandit Overhaul (Nexus Mods 88080) by Ooreeoo: allowed based on the Nexus page permissions
+- Open World Loot - Encounter Zone and Loot Overhaul (Nexus Mods 49681) by deletepch, Luridum and zinghunt: allowed based on the Nexus page permissions
+- Tamrielic Distribution (Nexus Mods 71372) by TateTaylorOH (Tate Taylor): allowed based on the Nexus page permissions
+
+Keep this patch free use.

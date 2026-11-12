@@ -1,6 +1,6 @@
 # Lawless - Tamrielic Distribution - OWL Patch
 
-**Version 0.1.0**
+**Version 0.1.1** (notice and metadata text only; the plugin is byte-identical to 0.1.0)
 
 Restores Tamrielic Distribution outfits on 14 Lawless NPCs when using the Open World Loot patch.
 
