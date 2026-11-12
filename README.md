@@ -4,7 +4,7 @@
 
 Restores Tamrielic Distribution outfits on 14 Lawless NPCs when using the Open World Loot patch.
 
-An ESL-flagged `.esp`: 14 record overrides, no new forms, no assets. Skyrim Special Edition and Anniversary Edition. Private: built for the Overhaul 1.2 load order and not published.
+An ESL-flagged `.esp`: 14 record overrides, no new forms, no assets. Skyrim Special Edition and Anniversary Edition. Tested only on the Overhaul 1.2 load order.
 
 ## Requirements
 
