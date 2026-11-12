@@ -41,7 +41,16 @@ See [BUILDING.md](BUILDING.md).
 
 ## Credits and Permissions
 
-Holds no plugin data from other mods; `inputs/` is not tracked. Credit goes to the authors of the mods listed under Requirements. Their permissions have not been checked, and must be before any release.
+Holds no plugin data from other mods; `inputs/` is not tracked. Credit goes to the authors of the mods listed below.
+
+Checked on 2026-11-11 and 2026-11-13 against each mod's Nexus permission block and author notes, not its description or readme. The plugin is derived from the mods below and stays under their authors' terms.
+
+| Mod | Author | What the Nexus page says | Status |
+|---|---|---|---|
+| [Lawless - A Bandit Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/88080) | Ooreeoo | Free use with credit, and derived work must stay free use. | allowed |
+| [Open World Loot - Encounter Zone and Loot Overhaul](https://www.nexusmods.com/skyrimspecialedition/mods/49681) | deletepch, Luridum and zinghunt | Upload, modification, conversion and asset use are allowed. | allowed |
+
+Every source allows a patch like this with credit; credit the authors above when publishing. Lawless asks that derived work stay free use, so this patch must too.
 
 ## License
 
